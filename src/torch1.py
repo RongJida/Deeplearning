@@ -29,3 +29,4 @@ plt.plot(w_list, mes_list)
 plt.ylabel('Loss')
 plt.xlabel('W')
 plt.show()
+

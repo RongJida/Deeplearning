@@ -23,7 +23,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.01) #优化器，来自clas
 for epoch in range(100):
     y_pred = model(x_data) #前馈
     loss = criterion(y_pred, y_data) #计算损失，也是前馈
-    print(epoch, loss)
+    print(epoch, loss.item())
 
     optimizer.zero_grad() #梯度归零
     loss.backward() #反向传播

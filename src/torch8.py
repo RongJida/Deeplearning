@@ -10,7 +10,7 @@ class DiabetesDataset(Dataset):
         #通过取第0个元素就知道数据集一共有多少个，所以对于下边len函数非常简单，直接return即可
         self.x_data = torch.from_numpy(xy[:,:-1]) #从第一列开始，最后一列不要。对于这个文件，取出来的是前边八列。
         self.y_data = torch.from_numpy(xy[:, [-1]]) #所有行，-1这一列，[]输出来是矩阵
-
+        
     def __getitem__(self, index): #加上索引
         return self.x_data[index],  self.y_data[index]
 
